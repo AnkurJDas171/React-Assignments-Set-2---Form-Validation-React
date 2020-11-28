@@ -1,7 +1,7 @@
 import React, { Component, useState } from "react";
 import "../styles/App.css";
 
-const App = () => {
+function App(){
   const [formDetail, setFormDetails] = React.useState({
     errorMessage: "",
     username: null,
@@ -155,9 +155,4 @@ const App = () => {
 
 export default App;
 
-// 1) Name data-testid = 'name'
-// 2) Email address data-testid = 'email'
-// 3) Gender data-testid = 'gender'
-// 3) Phone Number data-testid = 'phoneNumber'
-// 4) Password data-testid = 'password', type='password'
-// 5) Submit button data-testid = 'submit'
+
