@@ -39,20 +39,23 @@ function App() {
   };
 
   const handelClick = () => {
-    let length = Object.keys(formDetail).length;
     let newFormDetail = { ...formDetail };
 
-    if (length < 8) {
+    if (
+      formDetail.name === "" ||
+      formDetail.email === "" ||
+      formDetail.phoneNumber === "" ||
+      formDetail.password === "" 
+    ) {
       newFormDetail.noError = false;
       newFormDetail.errorMessage = "All fields are mandatory";
     } else if (checkForAlphanumeric(formDetail.name)) {
       newFormDetail.noError = false;
       newFormDetail.errorMessage = "Name is not alphanumeric";
-    }else if(!formDetail.email.includes("@")){
+    } else if (!formDetail.email.includes("@")) {
       newFormDetail.noError = false;
       newFormDetail.errorMessage = "Email must contain @";
-    } 
-    else if (
+    } else if (
       formDetail.gender !== "male" &&
       formDetail.gender !== "female" &&
       formDetail.gender !== "other"
