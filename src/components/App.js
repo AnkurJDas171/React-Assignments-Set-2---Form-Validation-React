@@ -47,9 +47,12 @@ function App() {
       newFormDetail.errorMessage = "All fields are mandatory";
     } else if (checkForAlphanumeric(formDetail.name)) {
       newFormDetail.noError = false;
-      console.log("error 2");
       newFormDetail.errorMessage = "Name is not alphanumeric";
-    } else if (
+    }else if(!formDetail.email.includes("@")){
+      newFormDetail.noError = false;
+      newFormDetail.errorMessage = "Email must contain @";
+    } 
+    else if (
       formDetail.gender !== "male" &&
       formDetail.gender !== "female" &&
       formDetail.gender !== "other"
