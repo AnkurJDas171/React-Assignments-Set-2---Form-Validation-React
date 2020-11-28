@@ -74,32 +74,31 @@ function App() {
 
   return (
     <div id="main">
-      {!formDetail.noError && (
-        <div className="formContainer">
-          <label className="label" for="name">
-            Name
-          </label>
-          <input
-            type="text"
-            data-testid="name"
-            value={formDetail.name}
-            onChange={(event) => handelValueChange(event.target.value, "name")}
-          />
+      <div className="formContainer">
+        <label className="label" for="name">
+          Name
+        </label>
+        <input
+          type="text"
+          data-testid="name"
+          value={formDetail.name}
+          onChange={(event) => handelValueChange(event.target.value, "name")}
+        />
 
-          <label className="label" for="email">
-            email
-          </label>
-          <input
-            type="text"
-            data-testid="email"
-            value={formDetail.email}
-            onChange={(event) => handelValueChange(event.target.value, "email")}
-          />
+        <label className="label" for="email">
+          email
+        </label>
+        <input
+          type="text"
+          data-testid="email"
+          value={formDetail.email}
+          onChange={(event) => handelValueChange(event.target.value, "email")}
+        />
 
-          <label className="label" for="gender">
-            gender
-          </label>
-          {/* <select
+        <label className="label" for="gender">
+          gender
+        </label>
+        {/* <select
             default={formDetail.gender}
             onChange={(event) =>
               handelValueChange(event.target.value, "gender")
@@ -110,44 +109,41 @@ function App() {
             <option value="female">female</option>
             <option value="other">other</option>
           </select> */}
-          <input
-            type="text"
-            value={formDetail.gender}
-            data-testid="gender"
-            onChange={(event) =>
-              handelValueChange(event.target.value, "gender")
-            }
-          />
+        <input
+          type="text"
+          value={formDetail.gender}
+          data-testid="gender"
+          onChange={(event) => handelValueChange(event.target.value, "gender")}
+        />
 
-          <label className="label" for="phoneNumber">
-            Phone Number
-          </label>
-          <input
-            type="text"
-            data-testid="phoneNumber"
-            value={formDetail.phoneNumber}
-            onChange={(event) =>
-              handelValueChange(event.target.value, "phoneNumber")
-            }
-          />
+        <label className="label" for="phoneNumber">
+          Phone Number
+        </label>
+        <input
+          type="text"
+          data-testid="phoneNumber"
+          value={formDetail.phoneNumber}
+          onChange={(event) =>
+            handelValueChange(event.target.value, "phoneNumber")
+          }
+        />
 
-          <label className="label" for="password">
-            password
-          </label>
-          <input
-            type="password"
-            data-testid="password"
-            value={formDetail.password}
-            onChange={(event) =>
-              handelValueChange(event.target.value, "password")
-            }
-          />
+        <label className="label" for="password">
+          password
+        </label>
+        <input
+          type="password"
+          data-testid="password"
+          value={formDetail.password}
+          onChange={(event) =>
+            handelValueChange(event.target.value, "password")
+          }
+        />
 
-          <button data-testid="submit" onClick={handelClick}>
-            Submit
-          </button>
-        </div>
-      )}
+        <button data-testid="submit" onClick={handelClick}>
+          Submit
+        </button>
+      </div>
 
       {formDetail.noError && <div>Hello {formDetail.username}</div>}
       {!formDetail.noError && <div>{formDetail.errorMessage}</div>}
