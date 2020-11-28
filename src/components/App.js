@@ -84,10 +84,11 @@ function App(){
 
   return (
     <div id="main">
+      
       {formDetail.noError && <div>Hello {formDetail.username}</div>}
       {!formDetail.noError && <div>{formDetail.errorMessage}</div>}
       {!formDetail.noError && (
-        <div className="formContainer">
+        <form className="formContainer">
           <label className="label" for="name">
             Name
           </label>
@@ -147,7 +148,7 @@ function App(){
           <button data-testid="submit" onClick={handelClick}>
             Submit
           </button>
-        </div>
+        </form>
       )}
     </div>
   );
