@@ -53,22 +53,22 @@ const App = () => {
 
     try {
       if (length < 8) {
-        
+        newFormDetail.noError = false;
         throw "All fields are mandatory";
       } else if (checkForAlphanumeric(formDetail.name)) {
-        console.log("error 2");
+        newFormDetail.noError = false;
         throw "Name is not alphanumeric";
       } 
       else if(formDetail.gender !== "male" && formDetail.gender !== "female" && formDetail.gender !== "other"){
-        
+        newFormDetail.noError = false;
         throw "Please identify as male, female or others";
       }
       else if(isNaN(formDetail.phoneNumber)){
-        
+        newFormDetail.noError = false;
         throw "Phone Number must contain only numbers";
       }
       else if(formDetail.password.length < 6){
-        
+        newFormDetail.noError = false;
         throw "Password must contain atleast 6 letters";
       }
       else{
